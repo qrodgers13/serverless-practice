@@ -1,5 +1,6 @@
 import json
-
+import requests
+from twilio.rest import Client
 
 def hello(event, context):
     body = {
@@ -12,7 +13,9 @@ def hello(event, context):
         "body": json.dumps(body)
     }
 
-    return response
+    r = requests.get('https://api.github.com/events')
+
+    return r.json()
 
     # Use this code if you don't use the http event with the LAMBDA-PROXY
     # integration
