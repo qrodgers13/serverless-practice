@@ -20,3 +20,4 @@ var/
 .serverless
 config.py
 __pycache__/
+node_modules

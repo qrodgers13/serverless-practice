@@ -45,13 +45,14 @@ provider:
 #  environment:
 #    variable1: value1
 
+
 # you can add packaging information here
-#package:
+package:
 #  include:
 #    - include-me.py
 #    - include-me-dir/**
-#  exclude:
-#    - exclude-me.py
+  exclude:
+    - a/**
 #    - exclude-me-dir/**
 
 functions:
@@ -102,3 +103,6 @@ functions:
 #     NewOutput:
 #       Description: "Description for the output"
 #       Value: "Some output value"
+
+plugins:
+  - serverless-python-requirements
